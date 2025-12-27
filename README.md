@@ -51,19 +51,7 @@ The application demonstrates prompt engineering, backend API handling, rate limi
 ---
 ## Project Structure
 
-AI-Powered-Logo-Generator/
-│
-├── server/
-│ ├── public/
-│ │ ├── index.html
-│ │ ├── style.css
-│ │ └── script.js
-│ │
-│ ├── index.js
-│ ├── rateLimiter.js
-│ ├── promptBuilder.js
-│ ├── .env
-│ └── package.json
+<img width="414" height="514" alt="Screenshot 2025-12-27 222219" src="https://github.com/user-attachments/assets/dabd785b-3521-4e7f-a4c1-976b7323c960" />
 
 
 ---
@@ -89,11 +77,28 @@ HF_API_KEY=your_huggingface_access_token
 
 
 node index.js
+```
+---
+
+
+
+
+## DEMO
+
+
+<img width="1264" height="797" alt="Screenshot 2025-12-27 220406" src="https://github.com/user-attachments/assets/08bb9d40-83b1-43a7-965e-0aa170ad79d1" />
+
+
+
+
+<img width="1547" height="924" alt="Screenshot 2025-12-27 220231" src="https://github.com/user-attachments/assets/8c2b34e8-8eec-4f62-8133-310d9def3a15" />
+
+
 
 
 ---
 
-## DEMO
+
 
 
 

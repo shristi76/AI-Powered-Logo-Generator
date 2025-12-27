@@ -67,7 +67,7 @@ The application demonstrates prompt engineering, backend API handling, rate limi
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/AI-Powered-Logo-Generator.git
+git clone https://github.com/shristi76/AI-Powered-Logo-Generator.git
 cd AI-Powered-Logo-Generator/server
 npm install
 

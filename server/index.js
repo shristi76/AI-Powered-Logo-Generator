@@ -1,7 +1,9 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const path = require("path");
-const open = require("open").default;
+const fetch = require("node-fetch");
+
+// const open = require("open").default;
 
 const { rateLimit } = require("./rateLimiter");
 const { buildLogoPrompt } = require("./promptBuilder");
@@ -70,7 +72,7 @@ app.post("/generate-logo", async (req, res) => {
 
 // ✅ Start server + auto open browser
 const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-    open(`http://localhost:${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });

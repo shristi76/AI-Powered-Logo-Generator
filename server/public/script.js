@@ -13,7 +13,8 @@ generateBtn.addEventListener("click", async () => {
     downloadBtn.disabled = true;
 
     try {
-        const response = await fetch("http://localhost:3000/generate-logo", {
+        const response = await fetch("/generate-logo", {
+
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ idea })

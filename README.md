@@ -82,8 +82,10 @@ node index.js
 
 
 
-
+## Deploy at  https://ai-powered-logo-generator-2.onrender.com/
+---
 ## DEMO
+
 
 
 <img width="1264" height="797" alt="Screenshot 2025-12-27 220406" src="https://github.com/user-attachments/assets/08bb9d40-83b1-43a7-965e-0aa170ad79d1" />
@@ -94,6 +96,9 @@ node index.js
 <img width="1547" height="924" alt="Screenshot 2025-12-27 220231" src="https://github.com/user-attachments/assets/8c2b34e8-8eec-4f62-8133-310d9def3a15" />
 
 
+
+
+<img width="1850" height="920" alt="Screenshot 2026-02-13 215223" src="https://github.com/user-attachments/assets/8d146083-f962-47ad-8dd5-056c94180270" />
 
 
 ---

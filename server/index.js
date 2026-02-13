@@ -69,7 +69,7 @@ app.post("/generate-logo", async (req, res) => {
 });
 
 // ✅ Start server + auto open browser
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
     open(`http://localhost:${PORT}`);

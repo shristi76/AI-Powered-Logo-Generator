@@ -13,15 +13,15 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-// ✅ Serve frontend files
+// Serve frontend files
 app.use(express.static(path.join(__dirname, "public")));
 
-// ✅ Home route -> index.html
+//  Home route -> index.html
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-// ✅ AI Logo Generator API
+// AI Logo Generator API
 app.post("/generate-logo", async (req, res) => {
     const userId = req.ip;
 
@@ -57,7 +57,7 @@ app.post("/generate-logo", async (req, res) => {
             return res.status(500).json({ error: "HF model error" });
         }
 
-        // ✅ Image response
+        //  Image response
         const buffer = Buffer.from(await hfResponse.arrayBuffer());
 
         // HF returns WEBP mostly
@@ -70,7 +70,7 @@ app.post("/generate-logo", async (req, res) => {
     }
 });
 
-// ✅ Start server + auto open browser
+//  Start server + auto open browser
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

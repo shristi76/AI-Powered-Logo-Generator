@@ -6,7 +6,11 @@ function rateLimit(userId) {
     const limit = 5;
 
     if (!requests.has(userId)) {
-        requests.set(userId, []);
+        requests.set(userId, []);    //Agar user pehli baar request kar raha hai:
+
+// Map mein entry nahi hogi
+
+// Isliye uske liye empty array bana diya
     }
 
     const timestamps = requests

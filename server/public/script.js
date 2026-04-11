@@ -43,3 +43,13 @@ generateBtn.addEventListener("click", async () => {
         generateBtn.disabled = false;
     }
 });
+
+
+// Header button logic
+const aboutBtn = document.getElementById("aboutBtn");
+
+
+// Go to About page
+aboutBtn.addEventListener("click", () => {
+    window.location.href = "about.html";
+});

@@ -1,6 +1,6 @@
 # AI Powered Logo Generator
 
-An AI-powered web application that generates logo designs from user-provided text prompts using Hugging Face Stable Diffusion XL.
+An AI-powered web application that generates logo designs from user-provided text prompts.
 
 This project focuses on integrating modern AI inference APIs with a full-stack JavaScript application while following clean architectural and design practices.
 
@@ -16,7 +16,7 @@ The application demonstrates prompt engineering, backend API handling, rate limi
 ## Key Features
 
 - Text-to-image logo generation
-- Hugging Face Stable Diffusion XL integration
+- Hugging Face Stable Black forest integration
 - Prompt templating for consistent logo outputs
 - Server-side rate limiting
 - Responsive and minimal user interface
@@ -82,23 +82,25 @@ node index.js
 ## DEMO
 
 
-
-<img width="1887" height="930" alt="Screenshot 2026-04-12 004453" src="https://github.com/user-attachments/assets/1ad255b4-96a8-4756-9482-33840c5a4ed0" />
-
----
-
-
-<img width="1547" height="924" alt="Screenshot 2025-12-27 220231" src="https://github.com/user-attachments/assets/8c2b34e8-8eec-4f62-8133-310d9def3a15" />
-
-
-
-
----
-<img width="1908" height="915" alt="Screenshot 2026-04-12 004510" src="https://github.com/user-attachments/assets/e069f1c1-b6a1-419d-a667-5af1d182adbb" />
+<img width="1908" height="918" alt="Screenshot 2026-05-10 122747" src="https://github.com/user-attachments/assets/5e7d6167-c622-427c-ac4b-d210be44a5ed" />
 
 
 ---
 
+
+<img width="1902" height="808" alt="Screenshot 2026-05-10 122728" src="https://github.com/user-attachments/assets/a4610dd0-f91a-4524-b916-c250c96c987a" />
+
+
+
+
+---
+<img width="1907" height="917" alt="Screenshot 2026-05-10 122802" src="https://github.com/user-attachments/assets/486678a9-3a17-4eca-9cc6-aa3a24b8cd86" />
+
+
+---
+
+
+Thank You :)
 
 
 

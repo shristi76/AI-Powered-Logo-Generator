@@ -49,12 +49,7 @@ The application demonstrates prompt engineering, backend API handling, rate limi
 - Hugging Face Inference API
 
 ---
-## Project Structure
 
-<img width="414" height="514" alt="Screenshot 2025-12-27 222219" src="https://github.com/user-attachments/assets/dabd785b-3521-4e7f-a4c1-976b7323c960" />
-
-
----
 
 ## Getting Started
 
@@ -88,9 +83,9 @@ node index.js
 
 
 
-<img width="1264" height="797" alt="Screenshot 2025-12-27 220406" src="https://github.com/user-attachments/assets/08bb9d40-83b1-43a7-965e-0aa170ad79d1" />
+<img width="1887" height="930" alt="Screenshot 2026-04-12 004453" src="https://github.com/user-attachments/assets/1ad255b4-96a8-4756-9482-33840c5a4ed0" />
 
-
+---
 
 
 <img width="1547" height="924" alt="Screenshot 2025-12-27 220231" src="https://github.com/user-attachments/assets/8c2b34e8-8eec-4f62-8133-310d9def3a15" />
@@ -98,7 +93,8 @@ node index.js
 
 
 
-<img width="1850" height="920" alt="Screenshot 2026-02-13 215223" src="https://github.com/user-attachments/assets/8d146083-f962-47ad-8dd5-056c94180270" />
+---
+<img width="1908" height="915" alt="Screenshot 2026-04-12 004510" src="https://github.com/user-attachments/assets/e069f1c1-b6a1-419d-a667-5af1d182adbb" />
 
 
 ---

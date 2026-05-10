@@ -6,6 +6,8 @@ const downloadBtn = document.getElementById("downloadBtn");
 
 generateBtn.addEventListener("click", async () => {
     const idea = input.value.trim();
+
+    
     if (!idea) return;
 
     status.textContent = "Generating...";

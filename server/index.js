@@ -3,74 +3,107 @@ const dotenv = require("dotenv");
 const path = require("path");
 const fetch = require("node-fetch");
 
-// const open = require("open").default;
-
 const { rateLimit } = require("./rateLimiter");
 const { buildLogoPrompt } = require("./promptBuilder");
 
 dotenv.config();
 
 const app = express();
+
 app.use(express.json());
 
 // Serve frontend files
 app.use(express.static(path.join(__dirname, "public")));
 
-//  Home route -> index.html
+// Home Route
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-// AI Logo Generator API
+// Generate Logo API
 app.post("/generate-logo", async (req, res) => {
+
     const userId = req.ip;
 
     // Rate limiting
     if (!rateLimit(userId)) {
-        return res.status(429).json({ error: "Too many requests. Slow down." });
+        return res.status(429).json({
+            error: "Too many requests. Slow down."
+        });
     }
 
     const { idea } = req.body;
+
+    // Validation
     if (!idea) {
-        return res.status(400).json({ error: "Logo idea required" });
+        return res.status(400).json({
+            error: "Logo idea required"
+        });
     }
 
+    // Create AI prompt
     const prompt = buildLogoPrompt(idea);
 
     try {
+
+        // Hugging Face API request
         const hfResponse = await fetch(
-            "https://router.huggingface.co/hf-inference/models/stabilityai/stable-diffusion-xl-base-1.0",
+            "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell",
             {
                 method: "POST",
+
                 headers: {
                     Authorization: `Bearer ${process.env.HF_API_KEY}`,
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ inputs: prompt })
+
+                body: JSON.stringify({
+
+                    // Prompt
+                    inputs: prompt,
+
+                    // Optional generation settings
+                    parameters: {
+                        num_inference_steps: 5
+                    }
+                })
             }
         );
 
-        // ❗ HF error handling
+        // Handle HF errors
         if (!hfResponse.ok) {
+
             const errorText = await hfResponse.text();
+
             console.error("HF Error:", errorText);
-            return res.status(500).json({ error: "HF model error" });
+
+            return res.status(500).json({
+                error: "HF model error"
+            });
         }
 
-        //  Image response
-        const buffer = Buffer.from(await hfResponse.arrayBuffer());
+        // Convert response into binary buffer
+        const buffer = Buffer.from(
+            await hfResponse.arrayBuffer()
+        );
 
-        // HF returns WEBP mostly
-        res.set("Content-Type", "image/webp");
+        // Set image type
+        res.set("Content-Type", "image/png");
+
+        // Send image to frontend
         res.send(buffer);
 
     } catch (err) {
+
         console.error(err);
-        res.status(500).json({ error: "Image generation failed" });
+
+        res.status(500).json({
+            error: "Image generation failed"
+        });
     }
 });
 
-//  Start server + auto open browser
+// Start server
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

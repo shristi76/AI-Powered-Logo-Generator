@@ -77,7 +77,10 @@ node index.js
 
 
 
-## Deploy at  https://ai-powered-logo-generator-2.onrender.com/
+## LIVE
+
+https://ai-powered-logo-generator-3.onrender.com/index.html
+
 ---
 ## DEMO
 
